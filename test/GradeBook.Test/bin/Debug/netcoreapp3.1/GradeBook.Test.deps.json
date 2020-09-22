@@ -691,7 +691,7 @@
       },
       "Gradebook/1.0.0": {
         "runtime": {
-          "Gradebook.dll": {}
+          "GradeBook.dll": {}
         }
       }
     }

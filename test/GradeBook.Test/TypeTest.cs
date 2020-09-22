@@ -3,8 +3,57 @@ using Xunit;
 
 namespace GradeBook.Test
 {
+    public delegate string WriteLogDelegate(string LogMessage);
     public class TypeTest
     {
+        int count = 0;
+        [Fact]
+        public void WriteLogDelegateCanPointToMethod()
+        {
+            /* Delegates envokes multiple methods, (multi-cast delegates),
+            can declear a variable and point to different methods.
+            The only requirement of said methods is to match the signature of
+            the delegate. For this instance, the parameter and return type is
+            a string. A delegate is used when you need a variable to behave
+            as a method.
+            */
+            WriteLogDelegate log = ReturnMessage;
+            log += ReturnMessage; // This line envokes another method
+            log += IncrementCount; // This line envokes another method
+
+            var result = log("Hello");
+            Assert.Equal("Hello", result);
+        }
+        string IncrementCount(string message)
+        {
+            count++;
+            return message.ToLower();
+        }      
+        string ReturnMessage(string message)
+        {
+            count++;
+            return message;
+        }
+
+        [Fact]
+        public void test1()
+        {
+            var x = GetInt();
+            SetInt(ref x);
+
+            Assert.Equal(42,x);
+        }
+
+        private void SetInt(ref int x)
+        {
+            x = 42;
+        }
+
+        private int GetInt()
+        {
+            return 3;
+        }
+
         [Fact]
         public void CSharpCanPassByRef()
         {
@@ -14,9 +63,9 @@ namespace GradeBook.Test
             Assert.Equal("New Name", book1.Name);
         }
 
-        private void RefBookSetName(ref Book book, string name)
+        private void RefBookSetName(ref InMemoryBook book, string name)
         {
-            book = new Book(name);
+            book = new InMemoryBook(name);
         }
         [Fact]
         public void CSharpIsPassByValue()
@@ -27,9 +76,9 @@ namespace GradeBook.Test
             Assert.NotEqual("New Name", book1.Name);
         }
 
-        private void GetBookSetName(Book book, string name)
+        private void GetBookSetName(InMemoryBook book, string name)
         {
-            book = new Book(name);
+            book = new InMemoryBook(name);
         }
 
         [Fact]
@@ -41,7 +90,7 @@ namespace GradeBook.Test
             Assert.Equal("Book 3", book1.Name);
         }
 
-        private void SetName(Book book, string new_name)
+        private void SetName(InMemoryBook book, string new_name)
         {
             book.Name = new_name;
         }
@@ -65,9 +114,9 @@ namespace GradeBook.Test
             Assert.Same(book1, book2);
             Assert.True(Object.ReferenceEquals(book1, book2));
         }
-        Book GetBook(string name)
+        InMemoryBook GetBook(string name)
         {
-            return new Book(name);
+            return new InMemoryBook(name);
         }
     }
 }

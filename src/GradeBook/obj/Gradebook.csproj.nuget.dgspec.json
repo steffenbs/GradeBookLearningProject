@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\steff\\programmering\\Csharp\\gradebook\\src\\GradeBook\\Gradebook.csproj": {}
+    "C:\\Users\\Steffen\\Documents\\GitHub\\csharp_projects\\gradebook\\src\\GradeBook\\GradeBook.csproj": {}
   },
   "projects": {
-    "C:\\Users\\steff\\programmering\\Csharp\\gradebook\\src\\GradeBook\\Gradebook.csproj": {
+    "C:\\Users\\Steffen\\Documents\\GitHub\\csharp_projects\\gradebook\\src\\GradeBook\\GradeBook.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\steff\\programmering\\Csharp\\gradebook\\src\\GradeBook\\Gradebook.csproj",
-        "projectName": "Gradebook",
-        "projectPath": "C:\\Users\\steff\\programmering\\Csharp\\gradebook\\src\\GradeBook\\Gradebook.csproj",
-        "packagesPath": "C:\\Users\\steff\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\steff\\programmering\\Csharp\\gradebook\\src\\GradeBook\\obj\\",
+        "projectUniqueName": "C:\\Users\\Steffen\\Documents\\GitHub\\csharp_projects\\gradebook\\src\\GradeBook\\GradeBook.csproj",
+        "projectName": "GradeBook",
+        "projectPath": "C:\\Users\\Steffen\\Documents\\GitHub\\csharp_projects\\gradebook\\src\\GradeBook\\GradeBook.csproj",
+        "packagesPath": "C:\\Users\\Steffen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Steffen\\Documents\\GitHub\\csharp_projects\\gradebook\\src\\GradeBook\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\steff\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Steffen\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
